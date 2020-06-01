@@ -1,5 +1,5 @@
 {
-  "name": "repair-design",
+  "name": "rent-car",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TasarGithub/webstart7.git"
+    "url": "git+https://github.com/TasarGithub/di_light-ws7-8.git"
   },
-
   "browserslist": [
     "> 1%",
     "ie >= 11",
@@ -24,14 +23,12 @@
     "android >= 4",
     "bb >= 10"
   ],
-
-
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TasarGithub/webstart7/issues"
+    "url": "https://github.com/TasarGithub/di_light-ws7-8/issues"
   },
-  "homepage": "https://github.com/TasarGithub/webstart7#readme",
+  "homepage": "https://github.com/TasarGithub/di_light-ws7-8/#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
