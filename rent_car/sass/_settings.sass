@@ -2,9 +2,9 @@
   box-sizing: border-box
 
 html 
-  font-size:  14px
+  font-size:  calc(9px + 7*(100vw/1920))
 body
-  font-family: Futura book, sans-serif
+  font-family: Myriad Pro
   font-size: 1rem
 img 
   max-width: 100%
@@ -14,7 +14,10 @@ input
   outline-style: none
 
 h1, h2, h3, h4, strong 
-  font-weight: 400
+  //font-weight: 400
+  margin: 0
+h1  
+  font-size: calc(20px + 68*(100vw/1920))
 
 .display-none
   display: none
@@ -125,8 +128,39 @@ h1, h2, h3, h4, strong
     &__clients
       max-width: 360px
 
-.swiper-menu
-  z-index: 30
+
+
+
+    &-subtitle
+
+
+.title
+  font-family: "Myriad Pro" , sans-serifMyriad Pro Semibold
+  font-weight: 600
+  color: $light
+  letter-spacing: 1px
+  &__promo
+    margin-top: 1px
+    font-family: "Myriad Pro Semibold" , sans-serif
+    font-size: 5.45rem
+    max-width: 32.85rem
+    line-height: 5.15rem
+    letter-spacing: -1px
+
+.subtitle
+  display: block
+  font-family: "Myriad Pro" , sans-serif
+  font-size: 1.2rem
+  font-weight: 600
+  color: $light
+  &__promo
+    font-size: 1.57rem
+    max-width: 20rem
+    margin: 0
+    margin-top: 31px
+    line-height: 138%
+    margin-bottom: 0
+    letter-spacing: 2px
 
 .totop
   position: fixed

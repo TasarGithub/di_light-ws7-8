@@ -4,38 +4,69 @@
   left: 0
   width: 100%
   z-index: 99
-  background-color: $dark
-  padding: 24px 0
-.menu
-  display: flex
-  justify-content: space-between
-  align-items: center
-.logo 
-  color: $primary
-  font-family: Futura Demi, sans-serif
-  font-size: 1rem
-  text-transform: uppercase
-  text-decoration: none
-  margin-right: 2.13rem
-  
-  
-.nav
-  &__item
+  //background-color: $dark
+  //padding: 24px 0
+  &__body
+    padding: 7vh 1vw 0 1vw
+    display: flex
+    justify-content: space-between
+  &__logo
     text-decoration: none
-    color: $light
-    text-transform: uppercase
-    margin-right: 2.66rem
-    transition: color 0.2s
-    &:hover
-      color: $primary
-.phone
-  font-family: Futura Demi, sans-serif
-  color: $primary
-.contacts
-  &__phone
-    margin-right: 3.2rem
-    margin-left: 9px
-    //text-decoration-line: none
-  &__button
-    padding: 9px 22px
-    margin-right: 3px
+    max-width: 306px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-img
+      flex: 0 0 60px
+      margin: 0 22px 0 0
+      &>img
+        display: block
+        width: 100%
+        object-fit: cover
+  &__menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-list
+      color: $light
+      list-style: none
+      display: flex
+      justify-content: space-between
+      &>li
+        padding: 0 2.95vw 0 0 
+        font-family: "Open Sans", sans-serif
+        font-size: 1rem
+        font-weight: 400
+        line-height: 28px
+        &>a
+          color: $light
+          text-decoration: none
+  &__burger
+    display: block
+    visibility: hidden
+    opacity: 0
+    position: relative
+    width: 30px
+    height: 20px
+    &::after,&::before
+      content: ''
+      background-color: $light
+      position: absolute
+      width: 100%
+      height: 2px
+      left: 0
+      top: 0
+    &::after
+      top: 20px
+    &>span
+      position: absolute
+      background-color: $light
+      left: 0
+      top: 10px
+      width: 100%
+      height: 2px
+
+
+      
+      
+      
