@@ -491,11 +491,11 @@ $(document).ready(function () {
 
  function topArrow(){
     const totop = document.querySelector('.totop'),
-      hero = document.querySelector('.hero');
+      promo = document.querySelector('.promo');
  
     totop.style.opacity = 0;
      
-    const base = hero.offsetTop;
+    const base = promo.offsetTop;
     
 
      window.addEventListener('scroll', function(){    

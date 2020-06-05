@@ -1,20 +1,55 @@
 .promo
-  z-index: -1
+  //z-index: -1
   position: relative
   // display: flex
   // justify-content: center
   // align-items: center
-  padding-top: 202px
-  padding-bottom: 555px
+  padding-top: 0px
+  padding-bottom: 755px
   background: url('../img/promo/bg-promo.png') no-repeat center / cover
   background-color: rgba($dark, 0.9)
   max-height: 100vh
   color: #dddddd
+  &__wrap
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &__content
+    padding-top: 23vh
     padding-left: calc((1920px - 100vw)*0.02)    
     position: relative
     max-width: 446px
     margin-right: auto
+    margin-bottom: 13vh
+    //height: 33vh
+  &-video
+    &__wrap
+      //margin-top: 14vh
+      position: relative
+      //z-index: 3
+      padding: 0 calc((1920px - 100vw)*0.02)
+      display: flex
+      justify-content: center
+      align-items: center
+      max-width: 60.6875rem
+      width: 100%
+      min-height: 50vh
+      background: url('../img/video/video_main.png') no-repeat center/contain
+      margin: 0 auto
+      //padding-top: 250px
+    &__body
+      flex: 0 0 auto
+      width: 54px
+      &>img
+        display: block
+        width: 100%
+        &:hover
+          cursor: pointer
+
+    &__text
+      position: absolute
+      top: 9vh
+      left: -54px 
 
 
 
