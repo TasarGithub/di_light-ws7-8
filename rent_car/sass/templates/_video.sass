@@ -1,14 +1,48 @@
 .video-other
   padding-top: 400px
   padding-bottom: 200px
+  background-color: $grey
   &__slide
+    display: none
+    //position: relative
     max-width: 306px
-    &>img
-      width: 100%
+    &:hover
+      color: $green
+      fill: $green
+    &-img
+      position: relative
+      width: 306px
+      height: 172px
+      &:hover::before
+        opacity: 0.5
+        color: $green
+        fill: $green
+      &::before
+        //z-index: 10
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 306px
+        height: 172px
+        opacity: 0
+        background-color: $green
+
     &>span
       display: block
       margin-top: 26px
       font-size: 0.9rem
+  &__play-icon
+    position: absolute
+    top: 50%
+    height: 54px
+    margin-top: -27px
+    right: 50%
+    width: 54px
+    margin-right: -27px
+    &:hover
+      cursor: pointer
+
   &__title
     color: $dark
     max-width: 275px
@@ -29,8 +63,33 @@
       display: block
       margin-left: 19px
 
+.arrow-left, .arrow-right
+  position: absolute
+  top: 30%
+  width: 54px
+  height: 54px
+  z-index: 3
+  &:hover
+    cursor: pointer
+    
+.arrow-left
+  left: -20px
+  &:hover .arrow-left-svg
+    opacity: 0.5
+    
+.arrow-right
+  right: 10px  
+  &:hover .arrow-right-svg
+    opacity: 0.5
 
-  
+.active
+  display: block
+
+
+
+
+
+
 .control
   margin-top: -24.49rem
   // display: flex
