@@ -3,7 +3,24 @@
 
 // @media screen and ( max-width: 1205px )
  
-// @media screen and ( max-width: 1070px )
+@media screen and ( max-width: 1170px )
+  .row__video-other
+    flex-direction: column
+  .col-30__video-other
+    flex: 0 0 100%
+    margin: 0 auto
+  .col-70__video-other
+    flex: 0 0 100%
+    margin: 0 auto
+  .section__video
+    padding-top: 120px
+  .col-50__video-other
+    &:nth-child(1)
+      margin-right: 33px
+  .arrow-right
+    right: -21px
+
+
  
 @media screen and ( max-width: 992px  )
   *:hover 
@@ -21,9 +38,18 @@
     &-video
       &__wrap
         min-height: calc(399*(100vw/810))
+      &__text
+        left: calc((992px - 100vw)*0.02)  
+        //display: none
   
 
-// @media screen and ( max-width: 790px  )
+@media screen and ( max-width: 760px  )
+  .row__video-other-slide
+    flex-direction: column
+  .col-50__video-other
+    flex: 0 0 100%
+    margin: 0 auto
+
   
 
 

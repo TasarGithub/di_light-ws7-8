@@ -476,7 +476,7 @@ $(document).ready(function () {
     player = new YT.Player('player', {
       height: '100%',
       width: '100%',
-      videoId: 'TvVYeLvujLk',
+      videoId: 'BQVQBwP17G8',
       events: {
         'onReady': videoPlay,
       }
@@ -511,7 +511,7 @@ $(document).ready(function () {
         totop.style.opacity = 0;
       }
       if (window.pageYOffset >= 100) {
-        $('.header').css('background-color', 'rgb(34,34,34,0.9)');
+        $('.header').css('background-color', 'rgb(34,34,34,0.95)');
       } else {
         $('.header').css('background-color', 'transparent');
       }

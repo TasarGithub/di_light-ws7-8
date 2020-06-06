@@ -401,7 +401,7 @@ h1 {
     margin-bottom: 0;
     letter-spacing: 2px; }
   .subtitle__video {
-    margin-top: 28px; }
+    margin-top: 2.8vh; }
 
 .totop {
   position: fixed;
@@ -461,7 +461,8 @@ h1 {
   -ms-flex: 0 0 70%;
   flex: 0 0 70%; }
   .col-70__video-other {
-    position: relative; }
+    position: relative;
+    height: 400px; }
 
 .bg-lines {
   position: relative; }
@@ -784,8 +785,8 @@ div[id$='-error'] {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 46.87vw;
-    height: 50vh; }
+    width: calc(46.87vw + (1920px - 100vw)*0.1);
+    height: calc((46.87vw*0.55) + (1920px - 100vw)*0.1); }
     .promo-video__body > img {
       display: block;
       width: 54px; }
@@ -866,7 +867,7 @@ div[id$='-error'] {
 
 .arrow-left, .arrow-right {
   position: absolute;
-  top: 30%;
+  top: 70px;
   width: 54px;
   height: 54px;
   z-index: 3; }
@@ -1355,6 +1356,32 @@ div[id$='-error'] {
 #user-email-modal {
   margin-top: -2px; }
 
+@media screen and (max-width: 1170px) {
+  .row__video-other {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .col-30__video-other {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin: 0 auto; }
+  .col-70__video-other {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin: 0 auto; }
+  .section__video {
+    padding-top: 120px; }
+  .col-50__video-other:nth-child(1) {
+    margin-right: 33px; }
+  .arrow-right {
+    right: -21px; } }
+
 @media screen and (max-width: 992px) {
   *:hover {
     box-shadow: none;
@@ -1366,7 +1393,23 @@ div[id$='-error'] {
   .card__pricetag {
     font-size: 1rem; }
   .promo-video__wrap {
-    min-height: calc(399*(100vw/810)); } }
+    min-height: calc(399*(100vw/810)); }
+  .promo-video__text {
+    left: calc((992px - 100vw)*0.02); } }
+
+@media screen and (max-width: 760px) {
+  .row__video-other-slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .col-50__video-other {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin: 0 auto; } }
 
 @media screen and (max-width: 680px) {
   .swiper-slide-projects__col-60 {
