@@ -24,8 +24,7 @@
 
  
 @media screen and ( max-width: 992px  )
-  // .section__video
-  //   padding: 40px 0 20px 0
+  .promo
 
   *:hover 
     box-shadow: none
@@ -46,6 +45,10 @@
       &__text
         left: calc((992px - 100vw)*0.02)  
         //display: none
+    &__content
+      //margin-bottom: calc(130px + (992px - 100vw)*0.4)
+      // margin-bottom: calc(130px * (10 / 1vw))
+
   .video-other
     &__title
       height: auto
@@ -55,13 +58,18 @@
 
 
 @media screen and ( max-width: 767px  )
+  // .section__video
+  //   padding: 60px 0 20px 0  
   body.lock
     overflow: hidden
   // .section__video
   //   padding: 0 0 20px 0
   .row__video-other-slide
     flex-direction: column
-
+  .col-70__video-other
+    display: flex
+    flex-direction: column
+    height: auto
   .col-50__video-other
     flex: 0 0 100%
     margin: 0 auto
@@ -71,15 +79,22 @@
   .video-other
     &__title
       height: auto
+      font-size: 2.2rem
+      text-align: center
+    &__all-video
+      justify-content: center
     &__arrow-left, &__arrow-right
       background-color: $green
+      position: static
     &__arrow-left
-      top: 225px;
-      left: 27%
+      margin-top: 1px
+      margin-left: 1px
+      order
     &__arrow-right
-      top: 225px;
-      left: 54%
+      margin-top: -54px
+      margin-left: auto
     &__slide
+
       &-img
         width: 90vw
         height: auto
@@ -124,6 +139,10 @@
     &__logo
       position: relative
       z-index: 3
+  .promo
+    &__content
+    //  margin-bottom: calc(130px + (767px - 100vw)*0.4)
+
     
 
 
@@ -145,6 +164,7 @@
 
     
 @media screen and ( max-width: 570px )
+
 
   .row
     flex-direction: column
@@ -173,12 +193,9 @@
   //   margin-le: 1.5rem
   
   .promo
-    //height: auto
-    // padding-top: 148px
-    // padding-bottom: 61px
     &__content
-     // max-width: 28.33rem
       margin-left: 0
+      // margin-bottom: calc(130px + (570px - 100vw)*0.4)      
     &__text
       // max-width: 25.744rem
       // margin-top: 1.08rem
