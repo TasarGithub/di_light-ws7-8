@@ -4,6 +4,7 @@
 // @media screen and ( max-width: 1205px )
  
 @media screen and ( max-width: 1170px )
+
   .row__video-other
     flex-direction: column
   .col-30__video-other
@@ -23,6 +24,9 @@
 
  
 @media screen and ( max-width: 992px  )
+  // .section__video
+  //   padding: 40px 0 20px 0
+
   *:hover 
     box-shadow: none
     text-decoration: none
@@ -42,25 +46,43 @@
       &__text
         left: calc((992px - 100vw)*0.02)  
         //display: none
+  .video-other
+    &__title
+      height: auto
+  .col-70__video-other
+    margin-top: 20px
 
 
 
 @media screen and ( max-width: 767px  )
   body.lock
     overflow: hidden
-
+  // .section__video
+  //   padding: 0 0 20px 0
   .row__video-other-slide
     flex-direction: column
+
   .col-50__video-other
     flex: 0 0 100%
     margin: 0 auto
     &:nth-child(1)
       margin-right: 0
-  .video-other__slide
-
-    &-img
-      width: 90vw
+      margin-bottom: 100px
+  .video-other
+    &__title
       height: auto
+    &__arrow-left, &__arrow-right
+      background-color: $green
+    &__arrow-left
+      top: 225px;
+      left: 27%
+    &__arrow-right
+      top: 225px;
+      left: 54%
+    &__slide
+      &-img
+        width: 90vw
+        height: auto
   .header
     &::before
       visibility: visible 

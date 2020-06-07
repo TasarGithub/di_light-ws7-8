@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animate.css">
+  <!-- <link rel="stylesheet" href="./css/jquery.fancybox.min.css"> -->
+
   <link rel="icon" href="http://tasar.ru/rent-car/favicon.ico" type="image/x-icon">
   
   <title>Rent-car</title>
@@ -51,7 +53,7 @@
     <!-- /.container -->
   </div>
   <!-- /.header -->
-  <section id="promo" class="promo">
+  <section id="promo" class="section section__promo promo">
     <div class="container">
       <div class="promo__wrap"> 
         <div class="promo__content">
@@ -112,8 +114,9 @@
             <div class="col-50 col-50__video-other ">
               <div  id="slide1-1" class="video-other__slide active ">
                 <div class="video-other__slide-img">
-                  <img src="img/video/video1-1.png" alt="mask-video">
-                  <svg class="video-other__play-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+                  <img src="img/video/video1-1.jpg" alt="mask-video">
+                  <script src='https://www.youtube.com/iframe_api'> </script>
+                  <svg class="video-other__play-icon" id="slide1play" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
                     <g><g><path fill="#f7f4f2" d="M27 0c14.912 0 27 12.088 27 27S41.912 54 27 54 0 41.912 0 27 12.088 0 27 0z"/></g>
                     <g class="g"><path d="M32.905 24.809a2.566 2.566 0 0 1 0 4.44l-7.245 4.155a2.566 2.566 0 0 1-3.848-2.22v-8.34a2.565 2.565 0 0 1 3.848-2.25l7.245 4.155v.06z"/></g>
                   </g>
@@ -196,6 +199,8 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <!-- <script src="js/jquery.fancybox.min.js"></script> -->
+  
 
 <!-- Отложенная Загрузка яндекс-метрики -->
   <script>

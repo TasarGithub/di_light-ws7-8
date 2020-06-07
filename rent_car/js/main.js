@@ -486,6 +486,22 @@ $(document).ready(function () {
     event.target.playVideo();
   }
 
+  var playerSlide1;
+  $('#slide1-1 svg').on('click', function onYouTubeIframeAPIReady(){
+    playerSlide1 = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'BQVQBwP17G8',
+      events: {
+        'onReady': videoPlay2,
+      }
+    });
+  });
+  function videoPlay2(event) {
+    event.target.playVideo();
+  }
+
+
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/TvVYeLvujLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
