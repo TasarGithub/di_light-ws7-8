@@ -2,10 +2,20 @@
   padding-top: 400px
   padding-bottom: 200px
   background-color: $grey
+  &__arrow-left, &__arrow-right
+    top: 70px
+    z-index: 3
+  &__arrow-left
+    left: -20px
+  &__arrow-right
+    right: 10px  
+  
   &__slide
     display: none
     //position: relative
-    max-width: 306px
+    //max-width: 306px
+    &.active
+      display: block
     &:hover
       color: $green
       fill: $green
@@ -13,12 +23,16 @@
       position: relative
       width: 306px
       height: 172px
+      overflow: hidden
+      &>img
+        height: 100%
+        width: 100%
+        object-fit: cover
       &:hover::before
         opacity: 0.5
         color: $green
         fill: $green
       &::before
-        //z-index: 10
         content: ""
         position: absolute
         top: 0
@@ -66,27 +80,20 @@
 
 .arrow-left, .arrow-right
   position: absolute
-  top: 70px
   width: 54px
   height: 54px
-  z-index: 3
   &:hover
     cursor: pointer
+  &>svg
+    display: block
     
 .arrow-left
-  left: -20px
   &:hover .arrow-left-svg
     opacity: 0.5
     
 .arrow-right
-  right: 10px  
   &:hover .arrow-right-svg
     opacity: 0.5
-
-.active
-  display: block
-
-
 
 
 
