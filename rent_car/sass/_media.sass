@@ -14,7 +14,7 @@
     flex: 0 0 100%
     margin: 0 auto
   .section__video
-    padding-top: 120px
+    padding-top: 20px
   .col-50__video-other
     &:nth-child(1)
       margin-right: 33px
@@ -41,9 +41,14 @@
   .promo
     &-video
       &__wrap
-        min-height: calc(399*(100vw/810))
+        //min-height: calc(399*(100vw/810)) иначе сбивается центрирорвание
+        padding: 40px 0
+        margin-top: 0
       &__text
+        top: 8vh
         left: calc((992px - 100vw)*0.02)  
+        &>.title, &>.subtitle
+          color: $dark
         //display: none
     &__content
       //margin-bottom: calc(130px + (992px - 100vw)*0.4)

@@ -1,0 +1,34 @@
+.video-main
+  background-color: $grey
+.promo-video
+  &__wrap
+    //margin-top: 14vh
+    position: relative
+    //z-index: 3
+    padding: 0 calc((1920px - 100vw)*0.02)
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 60.6875rem
+    width: 100%
+    min-height: 50vh
+    background: url('../img/video/video_main.png') no-repeat center/contain
+    margin: -30vh auto 0
+    //padding-top: 250px
+  &__body
+    flex: 0 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    width: calc(46.87vw + (1920px - 100vw)*0.1)
+    height: calc((46.87vw*0.55) + (1920px - 100vw)*0.1)
+    &>img
+      display: block
+      width: 54px
+      &:hover
+        cursor: pointer
+
+  &__text
+    position: absolute
+    top: 9vh
+    left: -54px 
