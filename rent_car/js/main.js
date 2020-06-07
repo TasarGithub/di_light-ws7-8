@@ -593,7 +593,7 @@ $(document).ready(function () {
   });
 
   //слайдер для видео
-  $('#arrow-left').on('click', function (e) {
+  $('.arrow-left').on('click', function (e) {
     var currSlideId = $('.active').attr('id'),
     
     //nextSlideId =  //currSlideId.slice(0, currSlideId.length-1),
@@ -625,7 +625,7 @@ $(document).ready(function () {
     $(nextSlideIdTwo).toggleClass('active ');
   });
 
-  $('#arrow-right').on('click', function (e) {
+  $('.arrow-right').on('click', function (e) {
     var currSlideId = $('.active').attr('id'),
     nextSlideIdOne = "#slide1-",
     nextSlideIdTwo ="#slide2-";

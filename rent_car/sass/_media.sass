@@ -66,6 +66,8 @@
   //   padding: 0 0 20px 0
   .row__video-other-slide
     flex-direction: column
+    justify-content: center
+    align-items: center
   .col-70__video-other
     display: flex
     flex-direction: column
@@ -75,7 +77,9 @@
     margin: 0 auto
     &:nth-child(1)
       margin-right: 0
-      margin-bottom: 100px
+      margin-bottom: 50px
+  #arrow-left, #arrow-right
+    display: none
   .video-other
     &__title
       height: auto
@@ -83,6 +87,9 @@
       text-align: center
     &__all-video
       justify-content: center
+    &__arrow
+      display: flex
+      margin-bottom: 50px
     &__arrow-left, &__arrow-right
       background-color: $green
       position: static
@@ -91,8 +98,8 @@
       margin-left: 1px
       order
     &__arrow-right
-      margin-top: -54px
-      margin-left: auto
+     // margin-top: -54px
+     // margin-left: auto
     &__slide
 
       &-img
