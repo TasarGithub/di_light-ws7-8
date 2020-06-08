@@ -18,6 +18,12 @@
   .col-50__video-other
     &:nth-child(1)
       margin-right: 33px
+  .col-30__video-other
+    margin-bottom: 4vh
+  .video-other
+    &__title
+      height: auto
+    
   .arrow-right
     right: -21px
 
@@ -54,9 +60,7 @@
       //margin-bottom: calc(130px + (992px - 100vw)*0.4)
       // margin-bottom: calc(130px * (10 / 1vw))
 
-  .video-other
-    &__title
-      height: auto
+
   .col-70__video-other
     margin-top: 20px
 
@@ -83,8 +87,8 @@
     &:nth-child(1)
       margin-right: 0
       margin-bottom: 50px
-  #arrow-left, #arrow-right
-    display: none
+  // #arrow-left, #arrow-right
+  //   display: none
   .video-other
     &__title
       height: auto
@@ -92,24 +96,27 @@
       text-align: center
     &__all-video
       justify-content: center
-    &__arrow
-      display: flex
-      margin-bottom: 50px
-    &__arrow-left, &__arrow-right
-      background-color: $green
-      position: static
-    &__arrow-left
-      margin-top: 1px
-      margin-left: 1px
-      order
+    //&__arrow
+      // display: flex
+      // margin-bottom: 50px
+    // &__arrow-left, &__arrow-right
+    //   background-color: $green
+    //   position: static
+    // &__arrow-left
+    //   margin-top: 1px
+    //   margin-left: 1px
+      
     &__arrow-right
-     // margin-top: -54px
-     // margin-left: auto
+    //  margin-top: -54px
+    //  margin-left: auto
     &__slide
 
       &-img
         width: 90vw
         height: auto
+  #col2-slide
+    display: none
+  
   .header
     &::before
       visibility: visible 
@@ -154,6 +161,16 @@
   .promo
     &__content
     //  margin-bottom: calc(130px + (767px - 100vw)*0.4)
+  .reviews
+    padding: 5vh 0 20px
+    &__wrap
+      margin: 5vh 10vw
+      flex-wrap: wrap       
+    &__item
+      flex: 0 0 43% 
+    &__img
+      margin: 0
+
 
     
 

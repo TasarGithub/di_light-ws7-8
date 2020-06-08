@@ -120,7 +120,7 @@
           <!-- /#arrow-left.arrow-right -->
           <div class="row row__video-other-slide">
             <div class="col-50 col-50__video-other ">
-              <div  id="slide1-1" class="video-other__slide active ">
+              <div  id="slide1-1" data-id='1' class="video-other__slide active ">
                 <div class="video-other__slide-img">
                   <img src="img/video/video1-1.jpg" alt="mask-video">
                   <script src='https://www.youtube.com/iframe_api'> </script>
@@ -133,7 +133,7 @@
                 <span>Цейский заповедник близ Северной Осетии</span>
               </div>
               <!-- /.video-other__slide -->
-              <div id="slide1-2" class="video-other__slide ">
+              <div id="slide1-2" data-id='2' class="video-other__slide ">
                 <div class="video-other__slide-img">
                   <img src="img/video/video1-2.jpg" alt="mask-video">
                   <svg class="video-other__play-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -150,18 +150,8 @@
               <!-- /.video-other__slide -->
             </div>
             <!-- /.col-50 -->
-            <div class="video-other__arrow">
-              <div class="video-other__arrow-left arrow-left" id="arrow-left3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54"><g><g><path fill="#f7f4f2" d="M27 0c14.912 0 27 12.088 27 27S41.912 54 27 54 0 41.912 0 27 12.088 0 27 0z"/></g><g class="arrow-left-svg"><path fill="#222" d="M31 25.998a1 1 0 0 1 0 2h-7.59l3.3 3.29a1 1 0 0 1 0 1.42.997.997 0 0 1-.621.292h-.179a.998.998 0 0 1-.62-.292l-5-4.999a1 1 0 0 1-.21-.33 1 1 0 0 1 0-.76 1 1 0 0 1 .21-.33l5-5.001a1 1 0 0 1 .603-.288h.214a1.005 1.005 0 0 1 .603 1.709l-3.3 3.289z"/></g></g></svg>
-              </div>
-              <!-- /#arrow-left.arrow-left -->
-              <div class="video-other__arrow-right arrow-right" id="arrow-right4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54"><g><g><path fill="#f7f4f2" d="M27 0c14.912 0 27 12.088 27 27S41.912 54 27 54 0 41.912 0 27 12.088 0 27 0z"/></g><g class="arrow-right-svg"><path fill="#222" d="M30.59 25.998l-3.3-3.29a1.005 1.005 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .21.33 1 1 0 0 1 0 .76 1 1 0 0 1-.21.331l-5 5a1 1 0 0 1-1.42 0 1 1 0 0 1 0-1.42l3.3-3.291H23a1 1 0 1 1 0-2z"/></g></g></svg>
-              </div>           
-            </div>
-            <!-- /.video-other__arrow -->
-            <div class="col-50 col-50__video-other">
-              <div  id="slide2-1" class="video-other__slide active ">
+            <div id="col2-slide" class="col-50 col-50__video-other">
+              <div  id="slide2-1" data-id='3' class="video-other__slide active ">
                 <div class="video-other__slide-img">
                   <img src="img/video/video2-1.png" alt="mask-video">
                   <svg class="video-other__play-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -173,7 +163,7 @@
                 <span>Незабываемый маршрут в Ингушский заповедник: Боевые башни Эрзи</span>
               </div>
               <!-- /.video-other__slide -->
-              <div  id="slide2-2" class="video-other__slide ">
+              <div  id="slide2-2" data-id='4' class="video-other__slide ">
                 <div class="video-other__slide-img">
                   <img src="img/video/video2-2.jpg" alt="mask-video">
                   <svg class="video-other__play-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
@@ -204,6 +194,91 @@
   </section>
   <!-- /.section section__video -->
   
+
+  <section class="section reviews section__reviews">
+    <div class="container container__reviews">
+      <div class="reviews__title title">
+        Впечатления клиентов
+        <!-- /.reviews__subtitle subtitle -->
+      </div>
+      <div class="reviews__subtitle subtitle">
+        Ваши впечатления — наша мотивация
+      </div>
+      <div class="reviews__wrap">
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="img/reviews/client1.png" alt="reviews__foto" class="reviews__foto">
+              <img src="img/reviews/cloud.svg" alt="reviews__cloud" class="reviews__cloud">
+            </div>
+            <!-- /.reviews__img -->
+            <span class="reviews__name">
+              Большаков О.В.
+            </span> <!-- /.reviews__name -->
+            <p class="reviews__text">
+              Это было что-то невообразимое!! Если бы не этот автомобиль, наше путешествие бы не состоялось!
+            </p>
+            <!-- /.reviews__text -->
+          </div>
+          <!-- /.reviews__item -->
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="img/reviews/client2.png" alt="reviews__foto" class="reviews__foto">
+              <img src="img/reviews/cloud.svg" alt="reviews__cloud" class="reviews__cloud">
+            </div>
+            <!-- /.reviews__img -->
+            <span class="reviews__name">
+              Волков Н.Б.
+            </span> <!-- /.reviews__name -->
+            <p class="reviews__text">
+              Нет слов, одни эмоции... СПАСИБО вам ребята! Отличный автомобиль, цена и ваше отношение - РЕСПЕКТ!
+            </p>
+            <!-- /.reviews__text -->
+          </div>
+          <!-- /.reviews__item -->          
+
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="img/reviews/cloud.svg" alt="reviews__cloud" class="reviews__cloud">
+              <img src="img/reviews/client3.png" alt="reviews__foto" class="reviews__foto">
+
+            </div>
+            <!-- /.reviews__img -->
+            <span class="reviews__name">
+              Новиков К.Ф.
+            </span> <!-- /.reviews__name -->
+            <p class="reviews__text">
+              Чтобы кто не говорил - без авто за две недели мало что можно увидеть когда путешествуешь «дикарем».. РЕКОМЕНДУЮ!
+            </p>
+            <!-- /.reviews__text -->
+          </div>
+          <!-- /.reviews__item -->
+          <div class="reviews__item">
+            <div class="reviews__img">
+              <img src="img/reviews/client4.png" alt="reviews__foto" class="reviews__foto">
+              <img src="img/reviews/cloud.svg" alt="reviews__cloud" class="reviews__cloud">
+            </div>
+            <!-- /.reviews__img -->
+            <span class="reviews__name">
+              Шубин Т.И.
+            </span> <!-- /.reviews__name -->
+            <p class="reviews__text">
+              Все супер! Дастик ни разу не подвел, а спуск по дороге жизни на этом красавце - просто на всю жизнь...
+            </p>
+            <!-- /.reviews__text -->
+          </div>
+          <!-- /.reviews__item -->          
+      </div>
+      <!-- /.reviews_wrap -->
+
+      <!-- /.reviews__title -->
+    </div>
+    <!-- /.container container__reviews -->
+  </section>
+  <!-- /.section reviews section__reviews -->
+
+
+
+
   <div class="totop-wrap">
     <a href="#" id="totop" class="totop"> 
       <img src="img/totop.svg" alt="">

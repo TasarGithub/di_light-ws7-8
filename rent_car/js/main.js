@@ -602,55 +602,147 @@ $(document).ready(function () {
     console.log('currSlideId: ', currSlideId);
     var currSlideNum = currSlideId.slice(-1)*1;
     console.log('currSlideNum: ', currSlideNum);
-    if ((currSlideNum) == 1){
-      nextSlideIdOne = "#slide1-" + '2';
-      console.log('nextSlideIdOne: ', nextSlideIdOne);
-      nextSlideIdTwo = "#slide2-" + '2';
-      console.log('nextSlideIdTwo: ', nextSlideIdTwo);
+
+    //опр ширину вьюпорта
+    console.log('screen.availWidth: ', screen.availWidth);
+    if (screen.availWidth <= 767) {
+      //убираем актив со второго номера и 
+      //$("#slide2-"+currSlideNum).toggleClass('active');
+      //еще раз получаем кто есть актив и используем сквозную нум-ю
+      var currSlideDataId = $('.active').attr('data-id');
+      console.log('currSlideDataId:####### ', currSlideDataId);
+      if ((currSlideNum) == 1){
+        nextSlideDataId = 4;
+        console.log('nextSlideDataId: #####', nextSlideDataId);
+
+      } else {
+        nextSlideDataId = currSlideDataId - 1;
+        console.log('nextSlideDataId: ######', nextSlideDataId);
+      }
+      //предыдущий убираем
+      $('[data-id='+currSlideDataId+']').toggleClass('active');
+      $('[data-id='+nextSlideDataId+']').toggleClass('active');
+
+
     } else {
-      nextSlideIdOne = "#slide1-" + (currSlideNum-1);
-      console.log('nextSlideIdOne: ', nextSlideIdOne);
-      nextSlideIdTwo = "#slide2-" + (currSlideNum-1);     
-      console.log('nextSlideIdTwo: ', nextSlideIdTwo);
-    }
-    
-    $("#"+currSlideId).toggleClass('active');
-    $("#slide2-"+currSlideNum).toggleClass('active');
+        if ((currSlideNum) == 1){
+          nextSlideIdOne = "#slide1-" + '2';
+          console.log('nextSlideIdOne: ', nextSlideIdOne);
+          nextSlideIdTwo = "#slide2-" + '2';
+          console.log('nextSlideIdTwo: ', nextSlideIdTwo);
+        } else {
+          nextSlideIdOne = "#slide1-" + (currSlideNum-1);
+          console.log('nextSlideIdOne: ', nextSlideIdOne);
+          nextSlideIdTwo = "#slide2-" + (currSlideNum-1);     
+          console.log('nextSlideIdTwo: ', nextSlideIdTwo);
+        }
+        
+        $("#"+currSlideId).toggleClass('active');
+        $("#slide2-"+currSlideNum).toggleClass('active');
 
 
 
-    console.log('$(currSlideId): ', $("#"+currSlideId));
-    $(nextSlideIdOne).toggleClass('active ');
-    console.log(' $(nextSlideIdOne): ',  $(nextSlideIdOne));
-    $(nextSlideIdTwo).toggleClass('active ');
+        console.log('$(currSlideId): ', $("#"+currSlideId));
+        $(nextSlideIdOne).toggleClass('active ');
+        console.log(' $(nextSlideIdOne): ',  $(nextSlideIdOne));
+        $(nextSlideIdTwo).toggleClass('active ');
+      }
   });
 
   $('.arrow-right').on('click', function (e) {
     var currSlideId = $('.active').attr('id'),
     nextSlideIdOne = "#slide1-",
-    nextSlideIdTwo ="#slide2-";
+    nextSlideIdTwo ="#slide2-",
+    nextSlideDataId = 1;
     console.log('currSlideId: ', currSlideId);
     var currSlideNum = currSlideId.slice(-1)*1;
     console.log('currSlideNum: ', currSlideNum);
-    if ((currSlideNum) == 2){
-      nextSlideIdOne = "#slide1-" + '1';
-      console.log('nextSlideIdOne: ', nextSlideIdOne);
-      nextSlideIdTwo = "#slide2-" + '1';
-      console.log('nextSlideIdTwo: ', nextSlideIdTwo);
-    } else {
-      nextSlideIdOne = "#slide1-" + (currSlideNum + 1);
-      console.log('nextSlideIdOne: ', nextSlideIdOne);
-      nextSlideIdTwo = "#slide2-" + (currSlideNum + 1);     
-      console.log('nextSlideIdTwo: ', nextSlideIdTwo);
-    }
-    
-    $("#"+currSlideId).toggleClass('active');
-    $("#slide2-"+currSlideNum).toggleClass('active');
 
-    console.log('$(currSlideId): ', $("#"+currSlideId));
-    $(nextSlideIdOne).toggleClass('active ');
-    console.log(' $(nextSlideIdOne): ',  $(nextSlideIdOne));
-    $(nextSlideIdTwo).toggleClass('active ');
+    console.log('screen.availWidth: ', screen.availWidth);
+
+    //опр ширину вьюпорта
+    if (screen.availWidth <= 767) {
+      
+      //убираем актив со второго номера и - это  в отдельно функции
+      //$("#slide2-"+currSlideNum).toggleClass('active');
+      //еще раз получаем кто есть актив и используем сквозную нум-ю
+      var currSlideDataId = $('.active').attr('data-id');
+      console.log('currSlideDataId:##### ', currSlideDataId);
+      if ((currSlideNum) == 2){
+        nextSlideDataId = 1;
+
+      } else {
+        nextSlideDataId = nextSlideDataId + 1;
+        console.log('nextSlideDataId: ###### ', nextSlideDataId);
+      }
+      //предыдущий убираем
+      $('[data-id='+currSlideDataId+']').toggleClass('active');
+      $('[data-id='+nextSlideDataId+']').toggleClass('active');
+
+
+    } else {
+
+      if ((currSlideNum) == 2){
+        nextSlideIdOne = "#slide1-" + '1';
+        console.log('nextSlideIdOne: ', nextSlideIdOne);
+        nextSlideIdTwo = "#slide2-" + '1';
+        console.log('nextSlideIdTwo: ', nextSlideIdTwo);
+      } else {
+        nextSlideIdOne = "#slide1-" + (currSlideNum + 1);
+        console.log('nextSlideIdOne: ', nextSlideIdOne);
+        nextSlideIdTwo = "#slide2-" + (currSlideNum + 1);     
+        console.log('nextSlideIdTwo: ', nextSlideIdTwo);
+      }
+      
+      $("#"+currSlideId).toggleClass('active');
+      $("#slide2-"+currSlideNum).toggleClass('active');
+  
+      console.log('$(currSlideId): ', $("#"+currSlideId));
+      $(nextSlideIdOne).toggleClass('active ');
+      console.log(' $(nextSlideIdOne): ',  $(nextSlideIdOne));
+      $(nextSlideIdTwo).toggleClass('active ');
+    }
+
+  });
+
+// событие смены vw - для восстановления показа 2го слайда
+  $(window).resize(function(){
+    if ((screen.availWidth > 765 )&&(screen.availWidth < 770)) {
+        var currSlideId = $('.active').attr('id'),
+        nextSlideIdOne = "#slide1-",
+        nextSlideIdTwo ="#slide2-",
+        nextSlideDataId = 1;
+        //console.log('currSlideId: ', currSlideId);
+        var currSlideNum = currSlideId.slice(-1)*1;
+
+        var currCalNum = currSlideId.slice(-3,-2);
+        //console.log('currCalNum: ', currCalNum);
+        var itemSlideTwoActive = 1,
+        currCalNumInsert = 1;
+
+        //console.log('screen.availWidth: ', screen.availWidth);
+
+        //должно быть 2 слайда
+        if ((screen.availWidth >= 767 )&&(screen.availWidth < 770)) {
+          if (currCalNum == 1) {
+            currCalNumInsert = 2;
+          } else {
+            currCalNumInsert = 1;
+          }
+          itemSlideTwoActive = "#slide"+currCalNumInsert+"-"+currSlideNum;
+          //console.log('itemSlideTwoActive: ', itemSlideTwoActive);
+          if  ($(itemSlideTwoActive).hasClass("active")) {
+            //
+          } else {
+            ($(itemSlideTwoActive).addClass("active"));
+          }         
+        } else 
+        if ((screen.availWidth > 765 )&&(screen.availWidth < 767)) {
+          //всегда отключать фото из 2ой колонки
+          $("#slide2-"+currSlideNum).removeClass('active');
+          //console.log('"#slide2-"+currSlideNum): ', ("#slide2-"+currSlideNum));
+        }
+    }
   });
 
   // Бургер клик
